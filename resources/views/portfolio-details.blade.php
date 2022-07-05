@@ -33,7 +33,7 @@
           <h2>{{$portafolio->nombre}}</h2>
           <ol>
             <li><a href="{{route('producto.index')}}">Productos</a></li>
-            <li>Detalle</li>
+            <li>Detalles</li>
           </ol>
         </div>
 
