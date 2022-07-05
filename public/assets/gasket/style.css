@@ -18,7 +18,17 @@
     right: 60%;
     top: 15%;
 }
-
+@media (max-width: 767px) {
+    .outer {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        animation-name: outer;
+        position: absolute;
+        right: 29%;
+        top: 15%;
+    }
+}
 .inner {
   position: absolute;
   top: 50%;

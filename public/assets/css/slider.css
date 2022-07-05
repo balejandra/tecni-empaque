@@ -21,10 +21,10 @@
     background-color: #8a8a8a;
 }
 .fnc-slider .m--blend-dark .fnc-slide__mask-inner {
-    background-color: #575757;
+    background-color: #cbb62a;
 }
 .fnc-slider .m--navbg-dark {
-    background-color: #575757;
+    background-color: #bdad5b;
 }
 .fnc-slider .m--blend-white .fnc-slide__inner {
     background-color: #d9d7d7;
@@ -105,8 +105,6 @@
     top: 15%;
     width: 60.25vh;
     height: 57vh;
-    -webkit-clip-path: ellipse(45% 45% at 50% 50%);
-
     mask:radial-gradient(circle farthest-side,transparent calc(90% - 50px),#fff calc(100% - 82px));
     transform-origin: 50% 0;
     transition-timing-function: ease-in-out;
@@ -292,7 +290,7 @@
     position: relative;
     display: inline-block;
     vertical-align: top;
-    width: 100px;
+    width: 110px;
     height: 50px;
     font-size: 14px;
     color: #fff;
@@ -430,11 +428,11 @@ body {
 }
 .example-slider .fnc-slide-1 .fnc-slide__inner,
 .example-slider .fnc-slide-1 .fnc-slide__mask-inner {
-    background-image: url("../images/home/slider/carro.jpg");
+    background-image: url("../images/home/slider/manyparts.jpg");
 }
 .example-slider .fnc-slide-2 .fnc-slide__inner,
 .example-slider .fnc-slide-2 .fnc-slide__mask-inner {
-    background-image: url("../images/home/slider/manyparts.jpg");
+    background-image: url("../images/home/slider/carro.jpg");
 }
 .example-slider .fnc-slide-3 .fnc-slide__inner,
 .example-slider .fnc-slide-3 .fnc-slide__mask-inner {
@@ -624,4 +622,17 @@ body {
 .colorful-switch__checkbox:checked ~ .colorful-switch__label .colorful-switch__off:after {
     transition-timing-function: ease;
     transform: rotate(-45deg) scaleX(0) translateZ(0);
+}
+@media (max-width: 767px) {
+    .fnc-slide__heading-line {
+        overflow: hidden;
+        position: relative;
+        padding-right:20px;
+        font-size: 52px;
+        color: #fff;
+        word-spacing: 10px;
+        right: 40%;
+    }
+
+
 }

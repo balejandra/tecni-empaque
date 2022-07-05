@@ -12,33 +12,7 @@
         <div class="fnc-slider example-slider">
             <div class="fnc-slider__slides">
                 <!-- slide start -->
-                <div class="fnc-slide m--blend-green m--active-slide">
-                    <div class="fnc-slide__inner">
-
-                            <div class="outer fnc-slide__mask fnc-slide__mask-inner">
-                                <div class="inner"></div>
-                                <div class="dot1"></div>
-                                <div class="dot2"></div>
-                                <div class="dot3"></div>
-                                <div class="dot4"></div>
-                            </div>
-
-                        <div class="fnc-slide__content">
-                            <h2 class="fnc-slide__heading">
-                                <div class="fnc-slide__heading-line">
-                                    <span>Área</span>
-                                </div>
-                                <div class="fnc-slide__heading-line">
-                                    <span>Automotriz</span>
-                                </div>
-                            </h2>
-
-                        </div>
-                    </div>
-                </div>
-                <!-- slide end -->
-                <!-- slide start -->
-                <div class="fnc-slide m--blend-white">
+                <div class="fnc-slide m--blend-white m--active-slide">
                     <div class="fnc-slide__inner">
                         <div class="outer fnc-slide__mask fnc-slide__mask-inner">
                             <div class="inner"></div>
@@ -50,12 +24,38 @@
                         <div class="fnc-slide__content">
                             <h2 class="fnc-slide__heading">
                                 <div class="fnc-slide__heading-line">
+                                    <span>Área</span>
+                                </div>
+                                <div class="fnc-slide__heading-line">
+                                    <span>Automotriz</span>
+                                </div>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- slide end -->
+                <!-- slide start -->
+                <div class="fnc-slide m--blend-red">
+                    <div class="fnc-slide__inner">
+
+                        <div class="outer fnc-slide__mask fnc-slide__mask-inner">
+                            <div class="inner"></div>
+                            <div class="dot1"></div>
+                            <div class="dot2"></div>
+                            <div class="dot3"></div>
+                            <div class="dot4"></div>
+                        </div>
+
+                        <div class="fnc-slide__content">
+                            <h2 class="fnc-slide__heading">
+                                <div class="fnc-slide__heading-line">
                                     <span>Variedad</span>
                                 </div>
                                 <div class="fnc-slide__heading-line">
                                     <span>Productos</span>
                                 </div>
                             </h2>
+
                         </div>
                     </div>
                 </div>
@@ -107,8 +107,8 @@
             </div>
             <nav class="fnc-nav">
                 <div class="fnc-nav__bgs">
-                    <div class="fnc-nav__bg m--navbg-green m--active-nav-bg"></div>
-                    <div class="fnc-nav__bg m--navbg-white"></div>
+                    <div class="fnc-nav__bg m--navbg-white m--active-nav-bg"></div>
+                    <div class="fnc-nav__bg m--navbg-red "></div>
                     <div class="fnc-nav__bg m--navbg-dark"></div>
                     <div class="fnc-nav__bg m--navbg-blue"></div>
                 </div>
