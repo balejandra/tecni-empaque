@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="{{asset('assets/vendor/Owl/dist/assets/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/vendor/Owl/dist/assets/owl.theme.default.css')}}">
     <link rel="stylesheet" href="{{asset('assets/web/assets/mobirise-icons2/mobirise2.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/fontawesome-6.1.1/css/all.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/fontawesome-6.1.1/css/all.css')}}">
     <script src="{{asset('assets/vendor/jquery/jquery-3.6.0.min.js')}}"></script>
 
     <!-- Template Main CSS File -->
@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">
 
     {!! SEO::generate() !!}
+    @stack('scripts')
 </head>
 <body>
 @section('menu')
@@ -43,7 +44,6 @@
                 <i class="fa-brands fa-whatsapp my-float"></i>
             </div>
         </a>
-        </p>
     </div>
 @show
 <footer>
@@ -51,7 +51,7 @@
 </footer>
 
 
-@stack('scripts')
+
 
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

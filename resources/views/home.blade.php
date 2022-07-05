@@ -1,7 +1,11 @@
 @extends('layouts.web')
 
 @section('content')
-
+    @push('scripts')
+        <link rel="stylesheet" href="{{asset('assets/gasket/normalize.min.css')}}">
+        <script src="{{asset('assets/gasket/prefixfree.min.js')}}"></script>
+        <link rel="stylesheet" href="{{asset('assets/gasket/style.css')}}">
+        @endpush
     <div class="demo-cont">
 
         <!-- slider start -->
@@ -10,9 +14,15 @@
                 <!-- slide start -->
                 <div class="fnc-slide m--blend-green m--active-slide">
                     <div class="fnc-slide__inner">
-                        <div class="fnc-slide__mask">
-                            <div class="fnc-slide__mask-inner"></div>
-                        </div>
+
+                            <div class="outer fnc-slide__mask fnc-slide__mask-inner">
+                                <div class="inner"></div>
+                                <div class="dot1"></div>
+                                <div class="dot2"></div>
+                                <div class="dot3"></div>
+                                <div class="dot4"></div>
+                            </div>
+
                         <div class="fnc-slide__content">
                             <h2 class="fnc-slide__heading">
                                 <div class="fnc-slide__heading-line">
@@ -30,8 +40,12 @@
                 <!-- slide start -->
                 <div class="fnc-slide m--blend-white">
                     <div class="fnc-slide__inner">
-                        <div class="fnc-slide__mask">
-                            <div class="fnc-slide__mask-inner"></div>
+                        <div class="outer fnc-slide__mask fnc-slide__mask-inner">
+                            <div class="inner"></div>
+                            <div class="dot1"></div>
+                            <div class="dot2"></div>
+                            <div class="dot3"></div>
+                            <div class="dot4"></div>
                         </div>
                         <div class="fnc-slide__content">
                             <h2 class="fnc-slide__heading">
@@ -49,8 +63,12 @@
                 <!-- slide start -->
                 <div class="fnc-slide m--blend-dark">
                     <div class="fnc-slide__inner">
-                        <div class="fnc-slide__mask">
-                            <div class="fnc-slide__mask-inner"></div>
+                        <div class="outer fnc-slide__mask fnc-slide__mask-inner">
+                            <div class="inner"></div>
+                            <div class="dot1"></div>
+                            <div class="dot2"></div>
+                            <div class="dot3"></div>
+                            <div class="dot4"></div>
                         </div>
                         <div class="fnc-slide__content">
                             <h2 class="fnc-slide__heading">
@@ -65,8 +83,12 @@
                 <!-- slide start -->
                 <div class="fnc-slide m--blend-blue">
                     <div class="fnc-slide__inner">
-                        <div class="fnc-slide__mask">
-                            <div class="fnc-slide__mask-inner"></div>
+                        <div class="outer fnc-slide__mask fnc-slide__mask-inner">
+                            <div class="inner"></div>
+                            <div class="dot1"></div>
+                            <div class="dot2"></div>
+                            <div class="dot3"></div>
+                            <div class="dot4"></div>
                         </div>
                         <div class="fnc-slide__content">
                             <h2 class="fnc-slide__heading">
@@ -200,11 +222,32 @@
                 <p>Estamos muy cerca de ti.</p>
             </div>
 
+                <div class="row">
+                    <div class="col-lg-12">
+                <div class="row justify-content-center">
+                    <div class="col-sm-6">
+                    <div class="member" data-aos="fade-up">
+                        <div class="pic"><img src="{{asset('assets/images/home/tiendas/principal.png')}}" class="img-store-principal" alt=""></div>
+                        <div class="member-info">
+                            <h4>Sangolqui (Comercialización al por Mayor)</h4>
+                            <span>Av. Antonio Tanzado y Calle B</span>
+                            <div class="social">
+                                <a href=""><i class="bi bi-whatsapp"></i></a>
+                                <a href=""><i class="bi bi-facebook"></i></a>
+                                <a href=""><i class="bx bx-phone-call"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="row">
 
                 <div class="col-lg-4 col-md-6">
                     <div class="member" data-aos="fade-up">
-                        <div class="pic"><img src="{{asset('assets/images/home/tiendas/sucursal1.png')}}" class="img-store" alt=""></div>
+                        <div class="pic"><img src="{{asset('assets/images/home/tiendas/sucursal1.1.png')}}" class="img-store" alt=""></div>
                         <div class="member-info">
                             <h4>Quito</h4>
                             <span>Av. 6 de diciembre N49-69 y de las Cucardas Sector la Luz</span>

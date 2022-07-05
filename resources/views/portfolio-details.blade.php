@@ -11,9 +11,9 @@
                 <ul>
                     <li><a class="nav-link scrollto {{ Request::is('/*') ? 'active' : '' }}" href="{{route('home')}}">Inicio</a></li>
                     <li><a class="nav-link scrollto {{ Request::is('nosotros*') ? 'active' : '' }}" href="{{route('nosotros')}}">Nosotros</a></li>
-                    <li><a class="nav-link scrollto{{ Request::is('/servicios*') ? 'active' : '' }}" href="{{route('servicios')}}">Servicios</a></li>
-                    <li><a class="nav-link scrollto {{ Request::is('/portafolio*') ? 'active' : '' }}" href="{{route('portafolio')}}">Productos</a></li>
-                    <li><a class="nav-link scrollto {{ Request::is('/contacto*') ? 'active' : '' }}" href="{{route('contacto')}}">Contacto</a></li>
+                    <li><a class="nav-link scrollto {{ Request::is('servicios*') ? 'active' : '' }}" href="{{route('servicios')}}">Servicios</a></li>
+                    <li><a class="nav-link scrollto {{ Request::is('producto*') ? 'active' : '' }}" href="{{route('producto.index')}}">Productos</a></li>
+                    <li><a class="nav-link scrollto {{ Request::is('contacto*') ? 'active' : '' }}" href="{{route('contacto')}}">Contacto</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -30,9 +30,9 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Empaque</h2>
+          <h2>{{$portafolio->nombre}}</h2>
           <ol>
-            <li><a href="{{route('portafolio')}}">Productos</a></li>
+            <li><a href="{{route('producto.index')}}">Productos</a></li>
             <li>Detalle</li>
           </ol>
         </div>
@@ -51,12 +51,18 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="{{asset('assets/images/portafolio/productos/med-1921-hg_1.jpg')}}" alt="">
+                  <img src="{{asset('images/productos/'.$portafolio->foto_principal)}}" alt="">
                 </div>
-
-                <div class="swiper-slide">
-                  <img src="{{asset('assets/images/portafolio/productos/nengun.png')}}" alt="">
-                </div>
+                @if ($portafolio->foto_2)
+                      <div class="swiper-slide">
+                          <img src="{{asset('images/productos/'.$portafolio->foto_2)}}" alt="">
+                      </div>
+                @endif
+                  @if ($portafolio->foto_3)
+                      <div class="swiper-slide">
+                          <img src="{{asset('images/productos/'.$portafolio->foto_3)}}" alt="">
+                      </div>
+                  @endif
 
               </div>
               <div class="swiper-pagination"></div>
@@ -67,16 +73,14 @@
             <div class="portfolio-info">
               <h3>Información</h3>
               <ul>
-                <li><strong>Categoria</strong>: Motor</li>
-                <li><strong>Marca</strong>: ASU Company</li>
+                <li><strong>Categoria</strong>: {{$portafolio->categoria->nombre}}</li>
+                <li><strong>Marca</strong>: {{$portafolio->marca}}</li>
               </ul>
             </div>
             <div class="portfolio-description">
-              <h2>ESTO ES UN EJEMPLO</h2>
+              <h2>{{$portafolio->nombre}}</h2>
 
-              <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
-              </p>
+              <p>{{$portafolio->descripcion}}</p>
                 <section class="share3 cid-t7CcgRbypL">
                     <div class="container">
                         <div class="media-container-row">
@@ -86,7 +90,8 @@
                                 <div class="social-list align-center">
 
                                     <a class="iconfont-wrapper bg-facebook m-2 " target="_blank" href="#">
-                                        <span class="socicon-facebook socicon"><i class="fa-brands fa-whatsapp"></i></span>
+                                        <span class="socicon-facebook socicon">
+                                            <i class="fa-brands fa-whatsapp"></i></span>
                                     </a>
                                 </div>
                             </div>

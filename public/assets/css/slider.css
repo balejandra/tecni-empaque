@@ -105,9 +105,7 @@
     top: 15%;
     width: 60.25vh;
     height: 57vh;
-    margin-right: -90px;
     -webkit-clip-path: ellipse(45% 45% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
 
     mask:radial-gradient(circle farthest-side,transparent calc(90% - 50px),#fff calc(100% - 82px));
     transform-origin: 50% 0;
@@ -130,12 +128,9 @@
 .fnc-slide__mask-inner {
     z-index: -1;
     position: absolute;
-    left: 50%;
     top: 50%;
     width: 100vw;
     height: 100vh;
-    margin-left: -50vw;
-    margin-top: -50vh;
     background-size: cover;
     background-position: center center;
     background-blend-mode: luminosity;

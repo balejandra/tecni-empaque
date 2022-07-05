@@ -26,13 +26,8 @@ Route::get('servicios', function () {
     return view('servicios');
 })->name('servicios');
 
-Route::get('portafolio', function () {
-    return view('portafolio');
-})->name('portafolio');
-
-Route::get('portafolioDetalle', function () {
-    return view('portfolio-details');
-})->name('portafolioDetalle');
+Route::get('/producto','App\Http\Controllers\ProductoWebController@index')->name('producto');
+Route::resource('producto', \App\Http\Controllers\ProductoWebController::class);
 
 Route::get('contacto', function () {
     return view('contacto');
@@ -44,12 +39,12 @@ Route::middleware(['auth'])->group(function () {
     Route::view('/dashboard', 'dashboard')->name('dashboard');
     Route::resource('users', App\Http\Controllers\UserController::class);
 
+    Route::resource('categorias', App\Http\Controllers\CategoriaController::class);
+
+
+    Route::resource('productos', App\Http\Controllers\ProductoController::class);
 });
 
 
 
 
-Route::resource('categorias', App\Http\Controllers\CategoriaController::class);
-
-
-Route::resource('productos', App\Http\Controllers\ProductoController::class);

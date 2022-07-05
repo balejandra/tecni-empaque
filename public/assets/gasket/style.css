@@ -1,0 +1,217 @@
+.outer,
+.inner,
+.dot4,
+.dot3,
+.dot2,
+.dot1 {
+  animation-duration: 3s;
+  animation-timing-function: eas-in-out;
+  animation-iteration-count: infinite;
+}
+
+.outer {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation-name: outer;
+    position: absolute;
+    right: 60%;
+    top: 15%;
+}
+
+.inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 60%;
+  margin: -30% 0 0 -30%;
+  background: white;
+  border-radius: 50%;
+  animation-name: inner;
+}
+
+.dot4, .dot3, .dot2, .dot1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -5% 0 0 -5%;
+  width: 10%;
+  height: 10%;
+  background: white;
+  border-radius: 50%;
+}
+
+.dot1 {
+  animation-name: dot1;
+}
+
+.dot2 {
+  animation-name: dot2;
+}
+
+.dot3 {
+  animation-name: dot3;
+}
+
+.dot4 {
+  animation-name: dot4;
+}
+
+@keyframes outer {
+  6% {
+    transform: scale(0.9);
+  }
+  8% {
+    transform: scale(1.1);
+    border-radius: 50% 10%;
+  }
+  10%, 20% {
+    transform: scale(1);
+    border-radius: 50% 10%;
+  }
+  22% {
+    transform: skewx(5deg);
+    border-radius: 10% 50% 50% 10%;
+  }
+  24% {
+    transform: skewx(-5deg);
+  }
+  26% {
+    transform: skewx(3deg);
+  }
+  28% {
+    transform: skewx(-3deg);
+  }
+  30%, 40% {
+    transform: skewx(0);
+    border-radius: 10% 50% 50% 10%;
+  }
+  42% {
+    transform: skewx(-5deg);
+    border-radius: 10% 50% 10% 50%;
+  }
+  44% {
+    transform: skewx(5deg);
+  }
+  46% {
+    transform: skewx(-3deg);
+  }
+  48% {
+    transform: skewx(3deg);
+  }
+  50%, 60% {
+    transform: skewx(0);
+    border-radius: 10% 50% 10% 50%;
+  }
+  62% {
+    transform: skew(10deg);
+    border-radius: 10%;
+  }
+  64% {
+    transform: skew(-10deg);
+  }
+  66% {
+    transform: skew(5deg);
+  }
+  68% {
+    transform: skew(-5deg);
+  }
+  70%, 80% {
+    transform: skew(0deg);
+    border-radius: 10%;
+  }
+  82% {
+    transform: scale(1.1);
+    border-radius: 50%;
+  }
+  84% {
+    transform: scale(0.9);
+  }
+  86%, 100% {
+    transform: scale(1);
+    border-radius: 50%;
+  }
+}
+@keyframes inner {
+  4% {
+    transform: scale(1);
+  }
+  6% {
+    transform: scale(1.1);
+  }
+  8%, 58% {
+    transform: scale(0.8);
+  }
+  60% {
+    transform: scale(1);
+  }
+  62%, 80% {
+    transform: scale(0.6);
+  }
+  82% {
+    transform: scale(1);
+  }
+}
+@keyframes dot1 {
+  4%, 84% {
+    transform: none;
+  }
+  6% {
+    transform: scale(4);
+  }
+  8%, 20% {
+    transform: scale(1) translate(400%, -400%);
+  }
+  22%, 80% {
+    transform: translate(-400%, -400%);
+  }
+  82% {
+    transform: scale(3) translate(0, 0);
+  }
+}
+@keyframes dot2 {
+  4%, 84% {
+    transform: none;
+  }
+  6% {
+    transform: scale(4);
+  }
+  8%, 40% {
+    transform: scale(1) translate(-400%, 400%);
+  }
+  42%, 80% {
+    transform: translate(400%, 400%);
+  }
+  82% {
+    transform: scale(3) translate(0, 0);
+  }
+}
+@keyframes dot3 {
+  56%, 84% {
+    transform: none;
+  }
+  58% {
+    transform: scale(4);
+  }
+  62%, 80% {
+    transform: scale(1) translate(-400%, 400%);
+  }
+  82% {
+    transform: scale(3) translate(0, 0);
+  }
+}
+@keyframes dot4 {
+  56%, 84% {
+    transform: none;
+  }
+  58% {
+    transform: scale(4);
+  }
+  62%, 80% {
+    transform: scale(1) translate(400%, -400%);
+  }
+  82% {
+    transform: scale(3) translate(0, 0);
+  }
+}

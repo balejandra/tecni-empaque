@@ -9,9 +9,9 @@
             <ul>
                 <li><a class="nav-link scrollto {{ Request::is('/*') ? 'active' : '' }}" href="{{route('home')}}">Inicio</a></li>
                 <li><a class="nav-link scrollto {{ Request::is('nosotros*') ? 'active' : '' }}" href="{{route('nosotros')}}">Nosotros</a></li>
-                <li><a class="nav-link scrollto{{ Request::is('/servicios*') ? 'active' : '' }}" href="{{route('servicios')}}">Servicios</a></li>
-                <li><a class="nav-link scrollto {{ Request::is('/portafolio*') ? 'active' : '' }}" href="{{route('portafolio')}}">Productos</a></li>
-                <li><a class="nav-link scrollto {{ Request::is('/contacto*') ? 'active' : '' }}" href="{{route('contacto')}}">Contacto</a></li>
+                <li><a class="nav-link scrollto {{ Request::is('servicios*') ? 'active' : '' }}" href="{{route('servicios')}}">Servicios</a></li>
+                <li><a class="nav-link scrollto {{ Request::is('producto*') ? 'active' : '' }}" href="{{route('producto.index')}}">Productos</a></li>
+                <li><a class="nav-link scrollto {{ Request::is('contacto*') ? 'active' : '' }}" href="{{route('contacto')}}">Contacto</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->

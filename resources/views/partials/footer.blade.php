@@ -8,10 +8,10 @@
                         <h3>Tecni-Empaque</h3>
                         <p class="pb-3"><em>De todo en empaques y mangueras para tu auto</em></p>
                         <p>
-                           Av. 6 de Diciembre <br>
-                            Quito, Ecuador<br><br>
-                            <strong>Teléfono:</strong> 022-083314  / 022083284<br>
-                            <strong>Email:</strong> tecniempaque@gmail.com<br>
+                           Av. Antonio Tandazo <br>
+                            Quito-Ecuador<br><br>
+                            <strong>Teléfono:</strong> 022-083459  / 022-083284<br>
+                            <strong>Email:</strong> tecniempaque@hotmail.com<br>
                         </p>
 
                     </div>

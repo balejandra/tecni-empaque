@@ -15,99 +15,24 @@
                 <div class="col-lg-12">
                     <ul id="portfolio-flters">
                         <li data-filter="*" class="filter-active">Todos</li>
-                        <li data-filter=".filter-empaque">Empaque</li>
-                        <li data-filter=".filter-lubricantes">Lubricantes</li>
-                        <li data-filter=".filter-electrico">Electrico</li>
+                        @foreach($categorias as $categoria)
+                            <li data-filter=".{{$categoria}}">{{$categoria}}</li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
 
             <div class="row portfolio-container" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
-
-                <div class="col-lg-4 portfolio-wrap filter-empaque">
+                @foreach($portafolios as $portafolio)
+                <div class="col-lg-4 portfolio-wrap {{$portafolio->categoria->nombre}}">
                     <div class="portfolio-item">
-                        <img src="{{asset('assets/images/portafolio/productos/med-1921-hg_1.jpg')}}" alt="">
+                        <img src="{{asset('images/productos/'.$portafolio->foto_principal)}}" alt="">
                         <div class="portfolio-info">
-                            <h3>Empaque</h3>
-                            <div>
-                                  <a href="{{route('portafolioDetalle')}}" title="Detalle Empaque"><i class="bx bx-link"></i></a>
-                            </div>
+                            <h3><a class="link-product" href="{{route('producto.show',[$portafolio->id])}}">{{$portafolio->nombre}}</a></h3>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-4 portfolio-wrap filter-lubricantes">
-                    <div class="portfolio-item">
-                        <img src="{{asset('assets/images/portafolio/productos/84216_20210901171440.jpg')}}" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h3>Aceite</h3>
-                            <div>
-                                 <a href="#" title=""><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 portfolio-wrap filter-electrico">
-                    <div class="portfolio-item">
-                        <img src="{{asset('assets/images/portafolio/productos/BUJIA-IRIDIO.jpg')}}" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h3>Bujia</h3>
-                            <div>
-                                  <a href="#" title=""><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 portfolio-wrap filter-card">
-                    <div class="portfolio-item">
-                        <img src="{{asset('assets/images/portafolio/productos/filtro_aire.jpg')}}" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h3>Filtro de Aire</h3>
-                            <div>
-                                 <a href="#" title=""><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 portfolio-wrap filter-web">
-                    <div class="portfolio-item">
-                        <img src="{{asset('assets/images/portafolio/productos/kitdedistribucion.jpg')}}" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h3>Kit de Distribucion</h3>
-                            <div>
-                                 <a href="#" title=""><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 portfolio-wrap filter-app">
-                    <div class="portfolio-item">
-                        <img src="{{asset('assets/images/portafolio/productos/manguera_superior_.jpg')}}" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h3>Manguera Superior</h3>
-                            <div>
-                                 <a href="#" title=""><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4  portfolio-wrap filter-card">
-                    <div class="portfolio-item">
-                        <img src="{{asset('assets/images/portafolio/productos/h-preview.jpg')}}" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h3>Kit de Embrague</h3>
-                            <div>
-                                <a href="#" title=""><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                @endforeach
             </div>
 
         </div>

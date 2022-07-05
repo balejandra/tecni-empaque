@@ -8,6 +8,11 @@
     width: 415px;
     height: 315px;
 }
+
+.img-store-principal{
+    width: 695px;
+    height: 390px;
+}
 @-webkit-keyframes scroll {
     0% {
         transform: translateX(0);
@@ -177,4 +182,12 @@ a{
     margin-top: 8px;
     color: #707070;
     font-size: 13px;
+}
+
+a.link-product{
+    color: white;
+}
+
+a.link-product:hover{
+    color: #b6b6fa;
 }
