@@ -154,21 +154,21 @@ class ProductoController extends AppBaseController
         if($request->hasFile('foto_principal')){
             $principal=$request->file('foto_principal');
             $filenameprin= date('dmYGi').$principal->getClientOriginalName();
-            $avatar1=$principal->move(public_path().'/images/productos', $filenameprin);
+            $avatar1=$principal->move(env('RUTA_PRODUCTOS').'/images/productos', $filenameprin);
             $producto->foto_principal=$filenameprin;
         }
 
         if($request->hasFile('foto_2')){
             $izq2=$request->file('foto_2');
             $filenameizq2= date('dmYGi').$izq2->getClientOriginalName();
-            $avatar3=$izq2->move(public_path().'/images/productos', $filenameizq2);
+            $avatar3=$izq2->move(env('RUTA_PRODUCTOS').'/images/productos', $filenameizq2);
             $producto->foto_2=$filenameizq2;
         }
 
         if($request->hasFile('foto_3')){
             $izq3=$request->file('foto_3');
             $filenameizq3= date('dmYGi').$izq3->getClientOriginalName();
-            $avatar3=$izq3->move(public_path().'/images/productos', $filenameizq3);
+            $avatar3=$izq3->move(env('RUTA_PRODUCTOS').'/images/productos', $filenameizq3);
             $producto->foto_3=$filenameizq3;
         }
         $producto->nombre=$request->nombre;
