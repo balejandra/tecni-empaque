@@ -11,7 +11,7 @@ class ProductoWebController extends Controller
     public function index(Request $request)
     {
         $productos = Producto::orderByRaw('rand()')->get();
-        $categorias= Categoria::pluck('nombre');
+        $categorias= Categoria::all();
         return view('portafolio')
             ->with('portafolios', $productos)
             ->with('categorias',$categorias);

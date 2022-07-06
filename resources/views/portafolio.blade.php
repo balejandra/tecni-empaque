@@ -16,7 +16,7 @@
                     <ul id="portfolio-flters">
                         <li data-filter="*" class="filter-active">Todos</li>
                         @foreach($categorias as $categoria)
-                            <li data-filter=".{{$categoria}}">{{$categoria}}</li>
+                            <li data-filter=".{{$categoria->id}}">{{$categoria->nombre}}</li>
                         @endforeach
                     </ul>
                 </div>
@@ -24,7 +24,7 @@
 
             <div class="row portfolio-container" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
                 @foreach($portafolios as $portafolio)
-                <div class="col-lg-4 portfolio-wrap {{$portafolio->categoria->nombre}}">
+                <div class="col-lg-4 portfolio-wrap {{$portafolio->categoria_id}}">
                     <div class="portfolio-item">
                         <img src="{{asset('images/productos/'.$portafolio->foto_principal)}}" alt="">
                         <div class="portfolio-info">
