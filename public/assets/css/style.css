@@ -1670,7 +1670,8 @@ section {
 .portfolio img {
     width: 416px;
     height: 300px;
-    object-fit: cover;
+    object-fit: contain;
+    background-color: white;
 }
 
 
