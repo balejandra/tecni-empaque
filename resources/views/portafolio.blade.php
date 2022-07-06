@@ -26,7 +26,7 @@
                 @foreach($portafolios as $portafolio)
                 <div class="col-lg-4 portfolio-wrap {{$portafolio->categoria->nombre}}">
                     <div class="portfolio-item">
-                        <img src="{{env('RUTA_PRODUCTOS2').'images/productos/'.$portafolio->foto_principal}}" alt="">
+                        <img src="{{asset('images/productos/'.$portafolio->foto_principal)}}" alt="">
                         <div class="portfolio-info">
                             <h3><a class="link-product" href="{{route('producto.show',[$portafolio->id])}}">{{$portafolio->nombre}}</a></h3>
                         </div>
