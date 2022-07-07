@@ -8,7 +8,7 @@
             <h1><b>PRODUCTOS</b></h1>
         </div>
     </div>
-    <section class="portfolio">
+    <section class="portfolio fondo-blue">
         <div class="container">
 
             <div class="row">
@@ -21,20 +21,33 @@
                     </ul>
                 </div>
             </div>
-
-            <div class="row portfolio-container" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+            <div class="row portfolio-container">
                 @foreach($portafolios as $portafolio)
-                <div class="col-lg-4 portfolio-wrap {{$portafolio->categoria_id}}">
-                    <div class="portfolio-item">
-                        <img src="{{asset('images/productos/'.$portafolio->foto_principal)}}" alt="">
-                        <div class="portfolio-info">
-                            <h3><a class="link-product" href="{{route('producto.show',[$portafolio->id])}}">{{$portafolio->nombre}}</a></h3>
+                <div class="col-md-4 portfolio-wrap {{$portafolio->categoria_id}}">
+                    <div class="work-box">
+                        <a href="{{route('producto.show',[$portafolio->id])}}">
+                            <div class="work-img">
+                                <img src="{{asset('images/productos/'.$portafolio->foto_principal)}}" alt="" class="img-fluid">
+                            </div>
+                        </a>
+                        <div class="work-content">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <h2 class="w-title">{{$portafolio->nombre}}</h2>
+                                    <div class="w-more">
+                                        <span class="w-ctegory">{{$portafolio->categoria->nombre}}</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 @endforeach
             </div>
-
         </div>
     </section><!-- End Portfolio Section -->
+
     @endsection
