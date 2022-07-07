@@ -11,7 +11,7 @@
                     <h2 class="hero-title mb-4">Detalle</h2>
                     <ol class="breadcrumb d-flex justify-content-center">
                         <li class="breadcrumb-item">
-                            <a href="#">Productos</a>
+                            <a href="{{route('producto.index')}}">Productos</a>
                         </li>
                         <li class="breadcrumb-item active">{{$portafolio->nombre}}</li>
                     </ol>
