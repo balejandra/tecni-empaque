@@ -5,6 +5,10 @@
         <link rel="stylesheet" href="{{asset('assets/gasket/normalize.min.css')}}">
         <script src="{{asset('assets/gasket/prefixfree.min.js')}}"></script>
         <link rel="stylesheet" href="{{asset('assets/gasket/style.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/swiper.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/jquery.fancybox.min.css')}}">
+        <script src="{{asset('assets/js/swiper.min.js')}}"></script>
+        <script src="{{asset('assets/js/jquery.fancybox.min.js')}}"></script>
         @endpush
     <div class="demo-cont">
 
@@ -135,14 +139,22 @@
         <!-- slider end -->
 
     </div>
-
+    <div class="slider">
+        <div class="slide-track">
+            @foreach($marcas as $marca)
+            <div class="slide">
+                <img src="{{asset('images/marcas/'.$marca->foto)}}" class="slider-img" alt="{{$marca->nombre}}" />
+            </div>
+            @endforeach
+        </div>
+    </div>
     <section data-bs-version="5.1" class="image1 cid-t25K2PCcSh" id="image1-5">
 
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-12 col-lg-5">
                     <div class="image-wrapper">
-                        <img src="{{asset('assets/images/logos/logo.png')}}" alt="Mobirise">
+                        <img src="{{asset('assets/images/logos/logo.png')}}" alt="tecni-empaque">
                     </div>
                 </div>
                 <div class="col-12 col-lg">
@@ -180,38 +192,26 @@
             <div class="section-title" data-aos="fade-in" data-aos-delay="100">
                 <h2>Nuestros Productos</h2>
             </div>
-
             <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <img src="{{asset('assets/images/home/carrusel/prod1.jpg')}}" alt="" class="img-fixed">
+            <div class="carousel-gallery">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        @foreach($productos as $portafolio)
+                        <div class="swiper-slide">
+                            <a href="{{route('producto.show',[$portafolio->id])}}">
+                                <div class="image" style="background-image: url({{asset('images/productos/'.$portafolio->foto_principal)}})">
+                                    <div class="overlay">
+                                        <em class="mdi mdi-magnify-plus"></em>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                    </div><!-- End testimonial item -->
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <img src="{{asset('assets/images/home/carrusel/prod2.jpg')}}" alt="" class="img-fixed">
-                        </div>
-                    </div><!-- End testimonial item -->
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <img src="{{asset('assets/images/home/carrusel/prod3.jpg')}}" alt="" class="img-fixed">
-                        </div>
-                    </div><!-- End testimonial item -->
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <img src="{{asset('assets/images/home/carrusel/prod4.jpg')}}" alt="" class="img-fixed">
-                        </div>
-                    </div><!-- End testimonial item -->
-
+                        @endforeach
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
-                <div class="swiper-pagination"></div>
             </div>
-
+            </div>
         </div>
     </section><!-- End Testimonials Section -->
     <section id="team" class="team">
@@ -329,6 +329,10 @@
                     <div class="swiper-slide"><img src="{{asset('assets/images/home/proveedores/pevisa.jpg')}}" class="img-fluid" alt=""></div>
                     <div class="swiper-slide"><img src="{{asset('assets/images/home/proveedores/thg.png')}}" class="img-fluid" alt=""></div>
                     <div class="swiper-slide"><img src="{{asset('assets/images/home/proveedores/yaco.jpg')}}" class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src="{{asset('assets/images/home/proveedores/versachem.jpg')}}" class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src="{{asset('assets/images/home/proveedores/royal.jpg')}}" class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src="{{asset('assets/images/home/proveedores/genoro.png')}}" class="img-fluid" alt=""></div>
+
                 </div>
                 <div class="swiper-pagination"></div>
             </div>

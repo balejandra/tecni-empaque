@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', [\App\Http\Controllers\HomeController::class,'index'])->name('home');
 
 Route::get('nosotros', function () {
     return view('nosotros');
@@ -43,7 +41,9 @@ Route::middleware(['auth'])->group(function () {
 
 
     Route::resource('productos', App\Http\Controllers\ProductoController::class);
+    Route::resource('marcas', App\Http\Controllers\MarcaController::class);
 });
+
 
 
 

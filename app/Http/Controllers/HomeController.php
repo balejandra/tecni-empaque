@@ -2,19 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Marca;
+use App\Models\Producto;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     /**
      * Show the application dashboard.
@@ -23,6 +16,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $productos = Producto::where('categoria_id',3)->orderByRaw('rand()')->get();
+        $marcas= Marca::orderByRaw('rand()')->get();
+        return view('home')
+            ->with('productos', $productos)
+            ->with('marcas',$marcas);
     }
 }
