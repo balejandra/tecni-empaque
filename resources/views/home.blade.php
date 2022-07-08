@@ -200,9 +200,6 @@
                         <div class="swiper-slide">
                             <a href="{{route('producto.show',[$portafolio->id])}}">
                                 <div class="image" style="background-image: url({{asset('images/productos/'.$portafolio->foto_principal)}})">
-                                    <div class="overlay">
-                                        <em class="mdi mdi-magnify-plus"></em>
-                                    </div>
                                 </div>
                             </a>
                         </div>
