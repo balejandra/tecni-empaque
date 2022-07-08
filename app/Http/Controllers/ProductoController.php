@@ -51,28 +51,41 @@ class ProductoController extends AppBaseController
     /**
      * Store a newly created Producto in storage.
      *
-     * @param CreateProductoRequest $request
+     * @param Request $request
      *
      * @return Response
      */
-    public function store(CreateProductoRequest $request)
+    public function store(Request $request)
     {
+        $validated = $request->validate([
+            'nombre' => 'required|string',
+            'descripcion' => 'required|string',
+            'foto_principal'=>'required',
+            "categoria_id"    => "required",
+        ]);
+
         $producto= new Producto();
         $principal=$request->file('foto_principal');
-        $filenameprin= date('dmYGi').$principal->getClientOriginalName();
+        $imgName = $principal->getClientOriginalName();
+        $img = str_replace(' ','_',$imgName);
+        $filenameprin= date('dmYGi').$img;
         $avatar1=$principal->move(env('RUTA_PRODUCTOS').'/images/productos', $filenameprin);
         $producto->foto_principal=$filenameprin;
 
         if($request->hasFile('foto_2')){
             $izq2=$request->file('foto_2');
-            $filenameizq2= date('dmYGi').$izq2->getClientOriginalName();
+            $imgName2 = $izq2->getClientOriginalName();
+            $img2 = str_replace(' ','_',$imgName2);
+            $filenameizq2= date('dmYGi').$img2;
             $avatar3=$izq2->move(env('RUTA_PRODUCTOS').'/images/productos', $filenameizq2);
             $producto->foto_2=$filenameizq2;
         }
 
         if($request->hasFile('foto_3')){
             $izq3=$request->file('foto_3');
-            $filenameizq3= date('dmYGi').$izq3->getClientOriginalName();
+            $imgName3 = $izq3->getClientOriginalName();
+            $img3 = str_replace(' ','_',$imgName3);
+            $filenameizq3= date('dmYGi').$img3;
             $avatar3=$izq3->move(env('RUTA_PRODUCTOS').'/images/productos', $filenameizq3);
             $producto->foto_3=$filenameizq3;
         }
@@ -143,6 +156,12 @@ class ProductoController extends AppBaseController
      */
     public function update($id, UpdateProductoRequest $request)
     {
+        $validated = $request->validate([
+            'nombre' => 'required|string',
+            'descripcion' => 'required|string',
+            "categoria_id"    => "required",
+        ]);
+
         $producto = $this->productoRepository->find($id);
 
         if (empty($producto)) {
@@ -153,21 +172,27 @@ class ProductoController extends AppBaseController
 
         if($request->hasFile('foto_principal')){
             $principal=$request->file('foto_principal');
-            $filenameprin= date('dmYGi').$principal->getClientOriginalName();
+            $imgName = $principal->getClientOriginalName();
+            $img = str_replace(' ','_',$imgName);
+            $filenameprin= date('dmYGi').$img;
             $avatar1=$principal->move(env('RUTA_PRODUCTOS').'/images/productos', $filenameprin);
             $producto->foto_principal=$filenameprin;
         }
 
         if($request->hasFile('foto_2')){
             $izq2=$request->file('foto_2');
-            $filenameizq2= date('dmYGi').$izq2->getClientOriginalName();
+            $imgName2 = $izq2->getClientOriginalName();
+            $img2 = str_replace(' ','_',$imgName2);
+            $filenameizq2= date('dmYGi').$img2;
             $avatar3=$izq2->move(env('RUTA_PRODUCTOS').'/images/productos', $filenameizq2);
             $producto->foto_2=$filenameizq2;
         }
 
         if($request->hasFile('foto_3')){
             $izq3=$request->file('foto_3');
-            $filenameizq3= date('dmYGi').$izq3->getClientOriginalName();
+            $imgName3 = $izq3->getClientOriginalName();
+            $img3 = str_replace(' ','_',$imgName3);
+            $filenameizq3= date('dmYGi').$img3;
             $avatar3=$izq3->move(env('RUTA_PRODUCTOS').'/images/productos', $filenameizq3);
             $producto->foto_3=$filenameizq3;
         }

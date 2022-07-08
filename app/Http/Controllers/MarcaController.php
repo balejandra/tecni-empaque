@@ -59,7 +59,9 @@ class MarcaController extends AppBaseController
         $input = $request->all();
         if($request->hasFile('foto')){
             $principal=$request->file('foto');
-            $filenameprin= date('dmYGi').$principal->getClientOriginalName();
+            $imgName = $principal->getClientOriginalName();
+            $img = str_replace(' ','_',$imgName);
+            $filenameprin= date('dmYGi').$img;
             $avatar1=$principal->move(env('RUTA_PRODUCTOS').'/images/marcas', $filenameprin);
             $marca->foto=$filenameprin;
         }

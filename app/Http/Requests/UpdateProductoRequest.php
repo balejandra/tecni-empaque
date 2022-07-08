@@ -25,7 +25,7 @@ class UpdateProductoRequest extends FormRequest
     public function rules()
     {
         $rules = Producto::$rules;
-        
+
         return $rules;
     }
 }

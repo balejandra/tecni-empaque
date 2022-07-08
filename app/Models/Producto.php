@@ -59,11 +59,7 @@ class Producto extends Model implements Auditable
      * @var array
      */
     public static $rules = [
-        'nombre' => 'required',
-        'descripcion' => 'required',
-        'marca' => 'required',
-        'foto_principal' => 'required',
-        'categoria_id' => 'required'
+
     ];
     public function categoria()
     {
