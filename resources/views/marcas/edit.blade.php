@@ -1,13 +1,13 @@
 @extends('layouts.app')
 @section('title')
-    Edit Marca 
+    Marca
 @endsection
 @section('content')
     <section class="section">
             <div class="section-header">
-                <h3 class="page__heading m-0">Edit Marca</h3>
+                <h3 class="page__heading m-0">Editar Marca</h3>
                 <div class="filter-container section-header-breadcrumb row justify-content-md-end">
-                    <a href="{{ route('marcas.index') }}"  class="btn btn-primary">Back</a>
+                    <a href="{{ route('marcas.index') }}"  class="btn btn-primary">Atrás</a>
                 </div>
             </div>
   <div class="content">
@@ -19,7 +19,26 @@
                              <div class="card-body ">
                                     {!! Form::model($marca, ['route' => ['marcas.update', $marca->id], 'method' => 'patch', 'files' => true]) !!}
                                         <div class="row">
-                                            @include('marcas.fields')
+                                            <!-- Nombre Field -->
+                                            <div class="form-group col-sm-6">
+                                                {!! Form::label('nombre', 'Nombre:') !!}
+                                                {!! Form::text('nombre', null, ['class' => 'form-control']) !!}
+                                            </div>
+
+                                            <!-- Foto Field -->
+                                            <div class="form-group col-sm-6">
+                                                {!! Form::label('foto', 'Logo:') !!}
+                                                {!! Form::file('foto',['class' => 'form-control']) !!}
+                                                <img src="{{asset('images/marcas/'.$marca->foto)}}" alt="Sin foto" style="width: 20% !important;">
+                                            </div>
+                                            <div class="clearfix"></div>
+
+                                            <!-- Submit Field -->
+                                            <div class="form-group col-sm-12">
+                                                {!! Form::submit('Guardar', ['class' => 'btn btn-primary']) !!}
+                                                <a href="{{ route('marcas.index') }}" class="btn btn-light">Cancelar</a>
+                                            </div>
+
                                         </div>
 
                                     {!! Form::close() !!}

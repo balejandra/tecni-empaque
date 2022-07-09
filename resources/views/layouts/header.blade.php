@@ -15,10 +15,6 @@
             <div class="dropdown-menu dropdown-menu-right">
                 <div class="dropdown-title">
                     Bienvenid@, {{Auth::user()->nombres}}</div>
-                <a class="dropdown-item has-icon edit-profile" href="#" data-id="{{ Auth::user()->id }}">
-                    <i class="fa fa-user"></i>Editar Perfil</a>
-                <a class="dropdown-item has-icon" data-toggle="modal" data-target="#changePasswordModal" href="#" data-id="{{ \Auth::id() }}"><i
-                            class="fa fa-lock"> </i>Cambiar Contraseña</a>
                 <a href="{{ route('logout') }}" class="dropdown-item has-icon text-danger"
                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     <i class="fas fa-sign-out-alt"></i> Cerrar Sesión

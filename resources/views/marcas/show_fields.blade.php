@@ -13,6 +13,7 @@
 <!-- Foto Field -->
 <div class="form-group">
     {!! Form::label('foto', 'Foto:') !!}
-    <p>{{ $marca->foto }}</p>
+    <p> <img src="{{asset('images/marcas/'.$marca->foto) }}" alt="Sin foto"
+             style="max-width: 300px;max-height: 160px"></p>
 </div>
 

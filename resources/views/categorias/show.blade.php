@@ -1,14 +1,14 @@
 @extends('layouts.app')
 @section('title')
-    Categoria Details 
+    Categoria
 @endsection
 @section('content')
     <section class="section">
         <div class="section-header">
-        <h1>Categoria Details</h1>
+        <h1>Detalles Categoria</h1>
         <div class="section-header-breadcrumb">
             <a href="{{ route('categorias.index') }}"
-                 class="btn btn-primary form-btn float-right">Back</a>
+                 class="btn btn-primary form-btn float-right">Atrás</a>
         </div>
       </div>
    @include('stisla-templates::common.errors')

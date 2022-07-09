@@ -470,3 +470,7 @@ a.link-product:hover{
 }
 
 /*# Carousel Gallery*/
+
+.dataTables_length {
+    padding-top: 20px;
+}

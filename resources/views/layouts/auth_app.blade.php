@@ -29,7 +29,7 @@
                     </div>
                     @yield('content')
                     <div class="simple-footer">
-                       Copyright &copy;  {{ config('app.name') }}  {{ date('Y') }}
+                        &copy; Copyright {{date('Y')}} <strong><span>Tecni-Empaque</span></strong>. Todos los Derechos Reservados
                     </div>
                 </div>
             </div>

@@ -1705,7 +1705,7 @@ h6 .badge {
     box-shadow: 0 2px 6px #e1e5e8;
     background-color: #cdd3d8;
     border-color: #cdd3d8;
-    color: #fff;
+    color: #000000;
 }
 
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.disabled:hover, .btn-secondary.disabled:focus, .btn-secondary.disabled:active {

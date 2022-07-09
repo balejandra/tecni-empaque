@@ -12,7 +12,7 @@
 
 <!-- Descripcion Field -->
 <div class="form-group">
-    {!! Form::label('descripcion', 'Descripcion:') !!}
+    {!! Form::label('descripcion', 'Descripción:') !!}
     <p>{{ $producto->descripcion }}</p>
 </div>
 
@@ -26,21 +26,21 @@
 <div class="form-group">
     {!! Form::label('foto_principal', 'Foto Principal:') !!}
     <p> <img src="{{asset('images/productos/'.$producto->foto_principal) }}" alt="Sin foto"
-             style="max-width: 800px;max-height: 660px"></p>
+             style="max-width: 600px;max-height: 460px"></p>
 </div>
 
 <!-- Foto 2 Field -->
 <div class="form-group">
     {!! Form::label('foto_2', 'Foto 2:') !!}
     <p> <img src="{{asset('images/productos/'.$producto->foto_2) }}" alt="Sin foto"
-             style="max-width: 800px;max-height: 660px"></p>
+             style="max-width: 600px;max-height: 460px"></p>
 </div>
 
 <!-- Foto 3 Field -->
 <div class="form-group">
     {!! Form::label('foto_3', 'Foto 3:') !!}
     <p> <img src="{{asset('images/productos/'.$producto->foto_3) }}" alt="Sin foto"
-             style="max-width: 800px;max-height: 660px"></p>
+             style="max-width: 600px;max-height: 460px"></p>
 </div>
 
 <!-- Categoria Id Field -->

@@ -1,3 +1,3 @@
 <div class="footer-left">
-    All rights reserved &copy; {{ date('Y') }}
+    &copy; Copyright {{date('Y')}} <strong><span>Tecni-Empaque</span></strong>. Todos los Derechos Reservados
 </div>

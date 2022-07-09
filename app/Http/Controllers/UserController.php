@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateUserRequest;
 use App\Http\Requests\UpdateUserRequest;
+use App\Models\User;
 use App\Repositories\UserRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Support\Facades\Hash;
 use Response;
 
 class UserController extends AppBaseController
@@ -54,11 +56,17 @@ class UserController extends AppBaseController
      */
     public function store(CreateUserRequest $request)
     {
-        $input = $request->all();
-
-        $user = $this->userRepository->create($input);
-
-        Flash::success('User saved successfully.');
+        $validated = $request->validate([
+            'nombres' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email:rfc,dns', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+        ]);
+        User::create([
+            'nombres' => $request['nombres'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
+        ]);
+        Flash::success('Usuario Guardado Satisfactoriamente.');
 
         return redirect(route('users.index'));
     }
@@ -75,7 +83,7 @@ class UserController extends AppBaseController
         $user = $this->userRepository->find($id);
 
         if (empty($user)) {
-            Flash::error('User not found');
+            Flash::error('Usuario no encontrado');
 
             return redirect(route('users.index'));
         }
@@ -95,7 +103,7 @@ class UserController extends AppBaseController
         $user = $this->userRepository->find($id);
 
         if (empty($user)) {
-            Flash::error('User not found');
+            Flash::error('Usuario no encontrado');
 
             return redirect(route('users.index'));
         }
@@ -113,17 +121,21 @@ class UserController extends AppBaseController
      */
     public function update($id, UpdateUserRequest $request)
     {
+        $validated = $request->validate([
+            'nombres' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email:rfc,dns', 'max:255']
+        ]);
         $user = $this->userRepository->find($id);
 
         if (empty($user)) {
-            Flash::error('User not found');
+            Flash::error('Usuario no encontrado');
 
             return redirect(route('users.index'));
         }
 
         $user = $this->userRepository->update($request->all(), $id);
 
-        Flash::success('User updated successfully.');
+        Flash::success('Usuario Actualizado Satisfactoriamente.');
 
         return redirect(route('users.index'));
     }
@@ -142,14 +154,14 @@ class UserController extends AppBaseController
         $user = $this->userRepository->find($id);
 
         if (empty($user)) {
-            Flash::error('User not found');
+            Flash::error('Usuario no encontrado');
 
             return redirect(route('users.index'));
         }
 
         $this->userRepository->delete($id);
 
-        Flash::success('User deleted successfully.');
+        Flash::success('Usuario Eliminado Satisfactoriamente.');
 
         return redirect(route('users.index'));
     }

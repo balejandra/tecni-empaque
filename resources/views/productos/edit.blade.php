@@ -1,13 +1,13 @@
 @extends('layouts.app')
 @section('title')
-    Edit Producto
+    Producto
 @endsection
 @section('content')
     <section class="section">
             <div class="section-header">
-                <h3 class="page__heading m-0">Edit Producto</h3>
+                <h3 class="page__heading m-0">Editar Producto</h3>
                 <div class="filter-container section-header-breadcrumb row justify-content-md-end">
-                    <a href="{{ route('productos.index') }}"  class="btn btn-primary">Back</a>
+                    <a href="{{ route('productos.index') }}"  class="btn btn-primary">Atrás</a>
                 </div>
             </div>
   <div class="content">
@@ -40,24 +40,24 @@
                                             <!-- Foto Principal Field -->
                                             <div class="form-group col-sm-6">
                                                 {!! Form::label('foto_principal', 'Foto Principal:') !!}
-                                                <img src="{{asset('images/productos/'.$producto->foto_principal)}}" alt="Sin foto" style="width: 50% !important;">
-                                                {!! Form::file('foto_principal') !!}
+                                                <img src="{{asset('images/productos/'.$producto->foto_principal)}}" alt="Sin foto" style="width: 20% !important;">
+                                                {!! Form::file('foto_principal',['class' => 'form-control']) !!}
                                             </div>
                                             <div class="clearfix"></div>
 
                                             <!-- Foto 2 Field -->
                                             <div class="form-group col-sm-6">
                                                 {!! Form::label('foto_2', 'Foto 2:') !!}
-                                                <img src="{{asset('images/productos/'.$producto->foto_2)}}" alt="Sin foto" style="width: 50% !important;">
-                                                {!! Form::file('foto_2') !!}
+                                                <img src="{{asset('images/productos/'.$producto->foto_2)}}" alt="Sin foto" style="width: 20% !important;">
+                                                {!! Form::file('foto_2',['class' => 'form-control']) !!}
                                             </div>
                                             <div class="clearfix"></div>
 
                                             <!-- Foto 3 Field -->
                                             <div class="form-group col-sm-6">
                                                 {!! Form::label('foto_3', 'Foto 3:') !!}
-                                                <img src="{{asset('images/productos/'.$producto->foto_3)}}" alt="Sin foto" style="width: 50% !important;">
-                                                {!! Form::file('foto_3') !!}
+                                                <img src="{{asset('images/productos/'.$producto->foto_3)}}" alt="Sin foto" style="width: 20% !important;">
+                                                {!! Form::file('foto_3',['class' => 'form-control']) !!}
                                             </div>
                                             <div class="clearfix"></div>
 
@@ -69,8 +69,8 @@
 
                                             <!-- Submit Field -->
                                             <div class="form-group col-sm-12">
-                                                {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-                                                <a href="{{ route('productos.index') }}" class="btn btn-light">Cancel</a>
+                                                {!! Form::submit('Guardar', ['class' => 'btn btn-primary']) !!}
+                                                <a href="{{ route('productos.index') }}" class="btn btn-light">Cancelar</a>
                                             </div>
 
                                         </div>

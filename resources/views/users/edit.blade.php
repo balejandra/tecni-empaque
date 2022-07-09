@@ -1,13 +1,13 @@
 @extends('layouts.app')
 @section('title')
-    Edit User 
+    Usuarios
 @endsection
 @section('content')
     <section class="section">
             <div class="section-header">
-                <h3 class="page__heading m-0">Edit User</h3>
+                <h3 class="page__heading m-0">Editar Usuario</h3>
                 <div class="filter-container section-header-breadcrumb row justify-content-md-end">
-                    <a href="{{ route('users.index') }}"  class="btn btn-primary">Back</a>
+                    <a href="{{ route('users.index') }}"  class="btn btn-primary">Atrás</a>
                 </div>
             </div>
   <div class="content">
@@ -19,7 +19,23 @@
                              <div class="card-body ">
                                     {!! Form::model($user, ['route' => ['users.update', $user->id], 'method' => 'patch']) !!}
                                         <div class="row">
-                                            @include('users.fields')
+                                            <!-- Nombres Field -->
+                                            <div class="form-group col-sm-6">
+                                                {!! Form::label('nombres', 'Nombres:') !!}
+                                                {!! Form::text('nombres', null, ['class' => 'form-control']) !!}
+                                            </div>
+
+                                            <!-- Email Field -->
+                                            <div class="form-group col-sm-6">
+                                                {!! Form::label('email', 'Email:') !!}
+                                                {!! Form::email('email', null, ['class' => 'form-control']) !!}
+                                            </div>
+                                            <!-- Submit Field -->
+                                            <div class="form-group col-sm-12">
+                                                {!! Form::submit('Guardar', ['class' => 'btn btn-primary']) !!}
+                                                <a href="{{ route('users.index') }}" class="btn btn-light">Cancelar</a>
+                                            </div>
+
                                         </div>
 
                                     {!! Form::close() !!}
