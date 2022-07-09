@@ -165,7 +165,7 @@
                         <p class="mbr-text mbr-fonts-style display-7">
                             Nos hemos desempeñado por  mas de 20 años como el principal proveedor de componentes de
                             Repuestos Automotrices. Conocidos por su innovación y mejora continua, y precios competitivos del mercado.
-                        <div> <a class="cta-btn" href="#">Saber Más</a></div>
+                        <div> <a class="cta-btn" href="{{route('nosotros')}}">Saber Más</a></div>
                     </div>
                 </div>
             </div>
@@ -180,7 +180,7 @@
                     <h3 class="mbr-section-title mb-4 mbr-fonts-style display-3">Encuentra aquí los productos PEVISA</h3>
 
                     <div class="mbr-section-btn">
-                        <a class="btn-fran" href="#">Productos</a>
+                        <a class="btn-fran" href="{{route('producto.index')}}">Productos</a>
                     </div>
                 </div>
             </div>
@@ -230,7 +230,6 @@
                             <span>Av. Antonio Tanzado y Calle B</span>
                             <div class="social">
                                 <a href=""><i class="bi bi-whatsapp"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
                                 <a href=""><i class="bx bx-phone-call"></i></a>
                             </div>
                         </div>
@@ -250,7 +249,6 @@
                             <span>Av. 6 de diciembre N49-69 y de las Cucardas Sector la Luz</span>
                             <div class="social">
                                 <a href=""><i class="bi bi-whatsapp"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
                                 <a href=""><i class="bx bx-phone-call"></i></a>
                             </div>
                         </div>
@@ -266,7 +264,6 @@
 
                             <div class="social">
                                 <a href=""><i class="bi bi-whatsapp"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
                                 <a href=""><i class="bx bx-phone-call"></i></a>
                             </div>
                         </div>
@@ -280,7 +277,6 @@
                             <span>Av. Mariscal Sucre S25-216 y S25f Taisha Sector Santa Rita</span>
                             <div class="social">
                                 <a href=""><i class="bi bi-whatsapp"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
                                 <a href=""><i class="bx bx-phone-call"></i></a>
                             </div>
                         </div>

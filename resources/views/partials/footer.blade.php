@@ -17,26 +17,15 @@
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-md-6 footer-links">
+                <div class="col-lg-6 col-md-6 footer-links text-center">
                     <h4>Información</h4>
-                    <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Inicio</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Nosotros</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Servicios</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Productos</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Contactos</a></li>
-                    </ul>
+                   <i class="bx bx-chevron-right"></i> Horarios de Atención
+                    <br>
+                    <br>
+                 Lunes a viernes 8:00 a 16:30
                 </div>
 
-                <div class="col-lg-3 col-md-6 footer-links">
-                    <h4>Nuestros Servicios</h4>
-                    <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Distribucion</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Empaques</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Mangueras</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Repuestos</a></li>
-                    </ul>
-                </div>
+
 
                 <div class="col-lg-2  col-md-6 footer-newsletter">
                     <div class="social-links mt-3">

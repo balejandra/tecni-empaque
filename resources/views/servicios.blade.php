@@ -90,7 +90,7 @@
                         <div class="card-body">
                             <h5 class="card-title"><a href="#">Variedad de Productos</a></h5>
                             <p class="card-text">En nuestra bodega contamos con stock y variedad de repuestos, para satisfacer y apoyar a nuestros clientes.</p>
-                            <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> Saber Más</a></div>
+
                         </div>
                     </div>
                 </div>
@@ -102,7 +102,6 @@
                         <div class="card-body">
                             <h5 class="card-title"><a href="#">Calidad Garantizada</a></h5>
                             <p class="card-text">En Tecni-Empaque somos la mejor solución para el mantenimiento de tu vehículo.</p>
-                            <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> Saber Más</a></div>
                         </div>
                     </div>
 
